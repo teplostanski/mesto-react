@@ -1,8 +1,10 @@
+@import url(./__logo/header__logo.css);
+
 .header {
-	max-width: 880px;
-  min-width: 320px;
-	border-bottom: solid 1px rgba(84, 84, 84, .7);
-	margin: 44px 0 0 0;
+  margin: 44px 0 0 0;
+  border-bottom: solid 1px rgb(84, 84, 84, 0.7);
+  max-width: 880px;
+  min-width: 300px;
 }
 
 @media screen and (max-width: 400px) {

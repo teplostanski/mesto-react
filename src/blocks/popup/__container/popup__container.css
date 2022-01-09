@@ -1,10 +1,10 @@
 .popup__container {
-  background-color: #fff;
-  color: #000;
+  background-color: white;
+  color: black;
   border-radius: 10px;
   width: 430px;
   position: relative;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, .5);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
 }
 
 @media screen and (max-width: 630px) {
