@@ -1,26 +1,12 @@
-import React, { useEffect, useState } from "react";
-import Ava from "../images/unknown-avatar.jpeg";
+import React, { useEffect, useState, useContext } from "react";
+import fakeDude from "../images/unknown-avatar.jpeg";
 import api from "../utils/api.js";
 import Card from "./Card";
+import CurrentUserContext from "../context/CurrentUserContext";
 
 function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
-  const [userName, setUserName] = useState("");
-  const [userDescription, setUserDescription] = useState("");
-  const [userAvatar, setUserAvatar] = useState(Ava);
   const [cards, setCards] = useState([]);
-
-  useEffect(() => {
-    api
-      .getUserInfo()
-      .then((data) => {
-        setUserName(data.name);
-        setUserDescription(data.about);
-        setUserAvatar(data.avatar);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }, []);
+  const currentUser = useContext(CurrentUserContext);
 
   useEffect(() => {
     api
@@ -37,18 +23,22 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
     <main className="main">
       <section className="profile">
         <div className="profile__img-wrapper" onClick={onEditAvatar}>
-          <img className="profile__avatar" src={userAvatar} alt="аватар" />
+          <img
+            className="profile__avatar"
+            src={currentUser.avatar || fakeDude}
+            alt="аватар"
+          />
         </div>
         <div className="profile__info">
           <div className="profile__main-info">
-            <h1 className="profile__name">{userName}</h1>
+            <h1 className="profile__name">{currentUser.name}</h1>
             <button
               type="button"
               className="profile__edit-button button"
               onClick={onEditProfile}
             ></button>
           </div>
-          <p className="profile__description">{userDescription}</p>
+          <p className="profile__description">{currentUser.about}</p>
         </div>
         <button
           type="button"
