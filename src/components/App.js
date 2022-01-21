@@ -6,6 +6,7 @@ import ImagePopup from "./ImagePopup";
 import PopupWithForm from "./PopupWithForm";
 import api from "../utils/api";
 import CurrentUserContext from "../context/CurrentUserContext";
+import EditProfilePopup from "./EditProfilePopup";
 
 function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
@@ -25,6 +26,18 @@ function App() {
         console.log(err);
       });
   }, []);
+
+  function handleUpdateUser(user) {
+    api
+      .updateUserInfo(user)
+      .then((res) => {
+        setCurrentUser(res);
+        closeAllPopups();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
   const handleCardClick = (card) => {
     setSelectedCard(card);
@@ -64,42 +77,11 @@ function App() {
       />
       <Footer />
       <ImagePopup card={selectedCard} onClose={closeAllPopups} />
-      <PopupWithForm
-        title="Редактировать профиль"
-        name="profile"
-        submitText="Сохранить"
+      <EditProfilePopup
         isOpen={isEditProfilePopupOpen}
         onClose={closeAllPopups}
-      >
-        <label>
-          <input
-            className="popup__input"
-            type="text"
-            name="name"
-            id="popup-profile-title"
-            placeholder="Ваше имя"
-            defaultValue=""
-            required
-            maxLength="40"
-            minLength="2"
-          />
-          <span className="popup__error-message popup-profile-title-error"></span>
-        </label>
-        <label>
-          <input
-            className="popup__input"
-            type="text"
-            name="about"
-            id="popup-profile-description"
-            placeholder="Расскажите о себе"
-            defaultValue=""
-            required
-            maxLength="200"
-            minLength="2"
-          />
-          <span className="popup__error-message popup-profile-description-error"></span>
-        </label>
-      </PopupWithForm>
+        onUpdateUser={handleUpdateUser}
+      />
 
       <PopupWithForm
         title="Новое место"
