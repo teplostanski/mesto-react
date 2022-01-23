@@ -8,6 +8,8 @@ export default function AddPlacePopup({ isOpen, onClose, onAddNewCard }) {
   function handleSubmit(evt) {
     evt.preventDefault();
     onAddNewCard({ name, link });
+    setName("");
+    setLink("");
   }
 
   return (
