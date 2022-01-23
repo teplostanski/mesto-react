@@ -37,7 +37,6 @@ export default function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
           name="name"
           id="popup-profile-title"
           placeholder="Ваше имя"
-          defaultValue=""
           value={name}
           required
           maxLength="40"
@@ -53,7 +52,6 @@ export default function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
           name="about"
           id="popup-profile-description"
           placeholder="Расскажите о себе"
-          defaultValue=""
           value={description}
           required
           maxLength="200"

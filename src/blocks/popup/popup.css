@@ -8,7 +8,6 @@
 @import url(./__figure/popup__figure.css);
 @import url(./__figcaption/popup__figcaption.css);
 @import url(./__img-gallery/popup__img-gallery.css);
-@import url(./_opened/popup_opened.css);
 
 @import url(./__button/_type/popup__button_type_disabled.css);
 @import url(./__input/_type/popup__input_type_error.css);

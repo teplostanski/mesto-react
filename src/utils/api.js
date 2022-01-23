@@ -44,11 +44,7 @@ class Api {
   }
 
   changeCardLikeStatus(cardId, isLiked) {
-    if (isLiked) {
-      return this.deleteLike(cardId);
-    } else {
-      return this.setLike(cardId);
-    }
+    return isLiked ? this.deleteLike(cardId) : this.setLike(cardId);
   }
 
   setLike(cardId) {
@@ -71,10 +67,10 @@ class Api {
   }
 }
 
-  export default new Api({
-    baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-30',
-    headers: {
-      authorization: '824c1506-61a7-48e4-8b2f-cd5fe1a7a429',
-      'Content-Type': 'application/json'
-    }
-  });
+export default new Api({
+  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-30',
+  headers: {
+    authorization: '824c1506-61a7-48e4-8b2f-cd5fe1a7a429',
+    'Content-Type': 'application/json'
+  }
+});
