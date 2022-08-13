@@ -1,72 +1,81 @@
-https://r0bomurlok.github.io/mesto-react/
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/r0bomurlok/mesto-react/main)
+![Website](https://img.shields.io/website?color=gold&label=r0bomurlok.github.io/mesto-react&up_color=green&up_message=online&url=https%3A%2F%2Fr0bomurlok.github.io%2Fmesto-react%2F)
+![GitHub watchers](https://img.shields.io/github/watchers/r0bomurlok/mesto-react?style=social)
 
-# Getting Started with Create React App
+# Проект: Место
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Данный проект является итоговой работой за 10-11 спринт на ***Яндекс.Практикуме***.
 
-## Available Scripts
+---
+## *Описание*
+----
+<p align="center"><img src="mesto.png" alt="скриншот проекта" width="700px"></a></p>
 
-In the project directory, you can run:
+### ***О чём проект?***
 
-### `npm start`
+"Mesto" — это сайт, где люди обмениваются фотографиями.
+"Местом" может быть что угодно: город, область или какое-то заведение.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Это учебный проект в [Яндекс.Практикуме](https://praktikum.yandex.ru/profile/web/). Проект создан для обучения и тренировки практических навыков адаптивной вёрстки и js.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### *Посмотреть пороект на GitHub Pages: https://r0bomurlok.github.io/mesto-react/*
 
-### `npm run build`
+### *Проект раелизован по макету из [Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+***В нём представлены:***
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Профиль пользователя и данные о нём;
+* Фото-карточки с возможностью добавления и оценивания.
 
-### `npm run eject`
+---
+ ## *Функциональность:*
+ * Редактирование профиля (имя и место работы);
+ * Добавление своих фото-карточек;
+ * Удаление своих фото-карточек;
+ * Возможность поставить лайк понравившейся публикации;
+ * Просмотр фотографии на полный экран;
+ * Закрытие попапа по оверлею (фону) и по нажатию на Escape;
+ * Реализована валидация всех форм;
+ * Все данные хранятся на сервере, использовано сторонее API.
+  ---
+  ## *Используемые технологии:*
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Данный проект является *одностраничным* сайтом, написанный на языке разметки HTML5;
+* Стили и картинки в самостоятельных папках и разбиты по блокам. Создана файловая структура по БЭМ (Nested);
+* Для создания сеток используется  `flex` и `grid`;
+* Реализованны переходы состояний ссылок и попапов (плавное затенение);
+* Сайт адаптивен. Корректно отображается на самых популярных разрешениях экрана;
+* Реализована валидация всех форм на сайте средствами JS;
+* Код написан с помощью библиотеки `React`;
+* Сборка проекта осуществлена с помощью `Webpack`;
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
+## Запуск проекта:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Установить зависимости
+```sh
+npm i
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Запустить проект на локальном сервере
+```sh
+npm run dev
+```
 
-## Learn More
+---
+## *Планы по доработке:*
+  * Улучшить UX и UI.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Правильный CSS!" />
+    </a>
+</p>
