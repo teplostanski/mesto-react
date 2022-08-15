@@ -21,7 +21,7 @@
 
 ---
 
-### *Посмотреть пороект на GitHub Pages: https://r0bomurlok.github.io/mesto-react/*
+### *Посмотреть проект на GitHub Pages: https://r0bomurlok.github.io/mesto-react/*
 
 ### *Проект раелизован по макету из [Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)*
 
